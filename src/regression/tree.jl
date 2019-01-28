@@ -11,8 +11,8 @@ module treeregressor
     export fit
 
     mutable struct NodeMeta{S}
-        l           :: NodeMeta{S}  # right child
-        r           :: NodeMeta{S}  # left child
+        l           :: NodeMeta{S}  # left child
+        r           :: NodeMeta{S}  # right child
         label       :: Float64      # most likely label
         feature     :: Int          # feature used for splitting
         threshold   :: S            # threshold value
