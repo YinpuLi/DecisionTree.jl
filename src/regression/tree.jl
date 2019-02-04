@@ -142,7 +142,12 @@ module treeregressor
                 hi = (lo < n_samples && curr_f == Xf[lo+1]
                     ? searchsortedlast(Xf, curr_f, lo, n_samples, Base.Order.Forward)
                     : lo)
-
+                
+                # searchsortedlast():
+                #
+                # index of the last value of vector a that is less than or equal to x;
+                # returns 0 if x is less than all values of v.
+                            
                 (lo != 1) && (is_constant = false)
                 # honor min_samples_leaf
                 if lo-1 >= min_samples_leaf && n_samples - (lo-1) >= min_samples_leaf
